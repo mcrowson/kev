@@ -1,0 +1,88 @@
+{
+    "status_code": 200, 
+    "data": {
+        "Name": "refindly-kev-test", 
+        "ResponseMetadata": {
+            "HTTPStatusCode": 200, 
+            "RetryAttempts": 0, 
+            "HostId": "WMqLzrgRHpVp8E0xEltVjyeQyVSEdUT0LxFBYwtDk+oK37I4uhr2EO4NBCHw5KvhhuVhGXOoN3A=", 
+            "RequestId": "E0087B210CD29A5B", 
+            "HTTPHeaders": {
+                "x-amz-bucket-region": "us-east-1", 
+                "x-amz-id-2": "WMqLzrgRHpVp8E0xEltVjyeQyVSEdUT0LxFBYwtDk+oK37I4uhr2EO4NBCHw5KvhhuVhGXOoN3A=", 
+                "server": "AmazonS3", 
+                "transfer-encoding": "chunked", 
+                "x-amz-request-id": "E0087B210CD29A5B", 
+                "date": "Tue, 20 Sep 2016 20:48:53 GMT", 
+                "content-type": "application/xml"
+            }
+        }, 
+        "MaxKeys": 1000, 
+        "Prefix": "", 
+        "Marker": "", 
+        "EncodingType": "url", 
+        "IsTruncated": false, 
+        "Contents": [
+            {
+                "LastModified": {
+                    "hour": 20, 
+                    "__class__": "datetime", 
+                    "month": 9, 
+                    "second": 52, 
+                    "microsecond": 0, 
+                    "year": 2016, 
+                    "day": 20, 
+                    "minute": 48
+                }, 
+                "ETag": "\"92a6c17ac09b31a0d60e507fde927af1\"", 
+                "StorageClass": "STANDARD", 
+                "Key": "s3%3As3testdocumentslug%3Aid%3A1", 
+                "Owner": {
+                    "DisplayName": "ryantremblay", 
+                    "ID": "40f89624f97ab711efb4f3fb31a8494030ac0e983720af8f06269d8e92bd0144"
+                }, 
+                "Size": 283
+            }, 
+            {
+                "LastModified": {
+                    "hour": 20, 
+                    "__class__": "datetime", 
+                    "month": 9, 
+                    "second": 53, 
+                    "microsecond": 0, 
+                    "year": 2016, 
+                    "day": 20, 
+                    "minute": 48
+                }, 
+                "ETag": "\"283c5cdbebc5a299635d2659cd0fc602\"", 
+                "StorageClass": "STANDARD", 
+                "Key": "s3%3As3testdocumentslug%3Aid%3A2", 
+                "Owner": {
+                    "DisplayName": "ryantremblay", 
+                    "ID": "40f89624f97ab711efb4f3fb31a8494030ac0e983720af8f06269d8e92bd0144"
+                }, 
+                "Size": 300
+            }, 
+            {
+                "LastModified": {
+                    "hour": 20, 
+                    "__class__": "datetime", 
+                    "month": 9, 
+                    "second": 53, 
+                    "microsecond": 0, 
+                    "year": 2016, 
+                    "day": 20, 
+                    "minute": 48
+                }, 
+                "ETag": "\"40dfc9a98b8fedb2fed0fcff5806a419\"", 
+                "StorageClass": "STANDARD", 
+                "Key": "s3%3As3testdocumentslug%3Aid%3A3", 
+                "Owner": {
+                    "DisplayName": "ryantremblay", 
+                    "ID": "40f89624f97ab711efb4f3fb31a8494030ac0e983720af8f06269d8e92bd0144"
+                }, 
+                "Size": 295
+            }
+        ]
+    }
+}

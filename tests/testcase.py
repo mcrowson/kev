@@ -1,6 +1,20 @@
 import unittest
 from kev.loading import KevHandler
 from envs import env
+import placebo
+from boto3 import Session
+import os
+
+
+def test_session():
+    placebo_dir = os.path.join(os.path.dirname(__file__), 'placebo')
+    session = Session()
+    pill = placebo.attach(session, data_path=placebo_dir)
+    if env('PLACEBO_MODE') == 'record':
+        pill.record()
+    else:
+        pill.playback()
+    return session
 
 kev_handler = KevHandler({
     's3':{
@@ -10,7 +24,8 @@ kev_handler = KevHandler({
             'indexer':{
                 'host':env('REDIS_HOST_TEST'),
                 'port':env('REDIS_PORT_TEST'),
-            }
+            },
+            'session': test_session()
         }
     },
     'redis': {

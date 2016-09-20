@@ -1,0 +1,42 @@
+{
+    "status_code": 200, 
+    "data": {
+        "Body": {
+            "body": "{\"city\": \"Durham\", \"last_updated\": \"2016-09-20T20:48:50Z\", \"name\": \"Goo and Sons\", \"no_subscriptions\": 1, \"_doc_type\": \"S3TestDocumentSlug\", \"is_active\": true, \"gpa\": 3.2, \"slug\": \"goo-sons\", \"date_created\": \"2016-09-20\", \"_id\": \"s3:s3testdocumentslug:id:1\", \"email\": \"goo@sons.com\"}", 
+            "__module__": "botocore.response", 
+            "__class__": "StreamingBody"
+        }, 
+        "AcceptRanges": "bytes", 
+        "ContentType": "binary/octet-stream", 
+        "ResponseMetadata": {
+            "HTTPStatusCode": 200, 
+            "RetryAttempts": 0, 
+            "HostId": "K9jL3FVBvZz3g2B/zlPEBV/53LQlpL4z/uFck1+KkovHq4wNGBeYfOzkstaC6jGJqB4ffsn9BDY=", 
+            "RequestId": "363A7E7B9057A98F", 
+            "HTTPHeaders": {
+                "content-length": "283", 
+                "x-amz-id-2": "K9jL3FVBvZz3g2B/zlPEBV/53LQlpL4z/uFck1+KkovHq4wNGBeYfOzkstaC6jGJqB4ffsn9BDY=", 
+                "accept-ranges": "bytes", 
+                "server": "AmazonS3", 
+                "last-modified": "Tue, 20 Sep 2016 20:48:51 GMT", 
+                "x-amz-request-id": "363A7E7B9057A98F", 
+                "etag": "\"eb7182cb60579056fb28da751044c7e8\"", 
+                "date": "Tue, 20 Sep 2016 20:48:52 GMT", 
+                "content-type": "binary/octet-stream"
+            }
+        }, 
+        "LastModified": {
+            "hour": 20, 
+            "__class__": "datetime", 
+            "month": 9, 
+            "second": 51, 
+            "microsecond": 0, 
+            "year": 2016, 
+            "day": 20, 
+            "minute": 48
+        }, 
+        "ContentLength": 283, 
+        "ETag": "\"eb7182cb60579056fb28da751044c7e8\"", 
+        "Metadata": {}
+    }
+}

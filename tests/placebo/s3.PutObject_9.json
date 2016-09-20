@@ -1,0 +1,20 @@
+{
+    "status_code": 200, 
+    "data": {
+        "ETag": "\"ba764fb22cc175686521303de3bd4f13\"", 
+        "ResponseMetadata": {
+            "HTTPStatusCode": 200, 
+            "RetryAttempts": 0, 
+            "HostId": "nFvAH/zEKsspF6wmL3XfOzYYD1TNHTA2i88w7xFOwbzdQRd9oy5SyZUwt/B3cH383/Dcpc2J9gI=", 
+            "RequestId": "D51E792F731880CB", 
+            "HTTPHeaders": {
+                "content-length": "0", 
+                "x-amz-id-2": "nFvAH/zEKsspF6wmL3XfOzYYD1TNHTA2i88w7xFOwbzdQRd9oy5SyZUwt/B3cH383/Dcpc2J9gI=", 
+                "server": "AmazonS3", 
+                "x-amz-request-id": "D51E792F731880CB", 
+                "etag": "\"ba764fb22cc175686521303de3bd4f13\"", 
+                "date": "Tue, 20 Sep 2016 20:48:50 GMT"
+            }
+        }
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "status_code": 200, 
+    "data": {
+        "MaxKeys": 1000, 
+        "Prefix": "", 
+        "Name": "refindly-kev-test", 
+        "ResponseMetadata": {
+            "HTTPStatusCode": 200, 
+            "RetryAttempts": 0, 
+            "HostId": "JnOPz0flgZCvXSHj79fHccqyIyUp6kT7wGaDyoFSpx77NdC0n8OdrXft8JbuerVGwPtdOYZkZlM=", 
+            "RequestId": "7D641223F29B3BF0", 
+            "HTTPHeaders": {
+                "x-amz-bucket-region": "us-east-1", 
+                "x-amz-id-2": "JnOPz0flgZCvXSHj79fHccqyIyUp6kT7wGaDyoFSpx77NdC0n8OdrXft8JbuerVGwPtdOYZkZlM=", 
+                "server": "AmazonS3", 
+                "transfer-encoding": "chunked", 
+                "x-amz-request-id": "7D641223F29B3BF0", 
+                "date": "Tue, 20 Sep 2016 20:48:47 GMT", 
+                "content-type": "application/xml"
+            }
+        }, 
+        "Marker": "", 
+        "EncodingType": "url", 
+        "IsTruncated": false
+    }
+}

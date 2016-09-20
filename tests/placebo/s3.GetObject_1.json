@@ -1,0 +1,42 @@
+{
+    "status_code": 200, 
+    "data": {
+        "Body": {
+            "body": "{\"_id\": \"s3:testdocument:id:1\", \"last_updated\": \"2016-09-20T20:48:44Z\", \"name\": \"Google\", \"date_created\": \"2016-09-20\", \"no_subscriptions\": 1, \"_doc_type\": \"TestDocument\", \"is_active\": true, \"gpa\": 4.0}", 
+            "__module__": "botocore.response", 
+            "__class__": "StreamingBody"
+        }, 
+        "AcceptRanges": "bytes", 
+        "ContentType": "binary/octet-stream", 
+        "ResponseMetadata": {
+            "HTTPStatusCode": 200, 
+            "RetryAttempts": 0, 
+            "HostId": "xUfinKZP854s88x4ikBXeewGoPNxgFv9nwbspxtSWygITIZS1CNCgnerouBm21/IFNjsDFKrKlE=", 
+            "RequestId": "84DD434A00F48308", 
+            "HTTPHeaders": {
+                "content-length": "202", 
+                "x-amz-id-2": "xUfinKZP854s88x4ikBXeewGoPNxgFv9nwbspxtSWygITIZS1CNCgnerouBm21/IFNjsDFKrKlE=", 
+                "accept-ranges": "bytes", 
+                "server": "AmazonS3", 
+                "last-modified": "Tue, 20 Sep 2016 20:48:45 GMT", 
+                "x-amz-request-id": "84DD434A00F48308", 
+                "etag": "\"3994c31be4b50935bdd3b67de4617120\"", 
+                "date": "Tue, 20 Sep 2016 20:48:46 GMT", 
+                "content-type": "binary/octet-stream"
+            }
+        }, 
+        "LastModified": {
+            "hour": 20, 
+            "__class__": "datetime", 
+            "month": 9, 
+            "second": 45, 
+            "microsecond": 0, 
+            "year": 2016, 
+            "day": 20, 
+            "minute": 48
+        }, 
+        "ContentLength": 202, 
+        "ETag": "\"3994c31be4b50935bdd3b67de4617120\"", 
+        "Metadata": {}
+    }
+}
