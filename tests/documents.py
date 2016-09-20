@@ -1,12 +1,12 @@
-import unittest
 import datetime
+import unittest
 
 from kev import (Document,CharProperty,DateTimeProperty,
                  DateProperty,BooleanProperty,IntegerProperty,
                  FloatProperty)
 from kev.exceptions import ValidationException, QueryError
 from kev.query import combine_list, combine_dicts
-from kev.testcase import kev_handler,KevTestCase
+from tests.testcase import kev_handler,KevTestCase
 
 
 class TestDocument(Document):
