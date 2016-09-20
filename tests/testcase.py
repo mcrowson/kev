@@ -18,7 +18,7 @@ def test_session():
 
 kev_handler = KevHandler({
     's3':{
-        'backend':'kev.backends.s3.db.S3DB',
+        'backend':'kev.backends.s3.db.S3RedisDB',
         'connection':{
             'bucket':env('S3_BUCKET_TEST'),
             'indexer':{
