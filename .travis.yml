@@ -7,5 +7,6 @@ python:
   - "3.5-dev" # 3.5 development branch
 # command to install dependencies
 install: "pip install -r requirements.txt"
+install: "pip install -r requirements_text.txt"
 # command to run tests
 script: nosetests
