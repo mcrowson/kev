@@ -10,7 +10,7 @@ class RedisDB(DocDB):
     db_class = redis.StrictRedis
     backend_id = 'redis'
 
-    def __init__(self,**kwargs):
+    def __init__(self, **kwargs):
         self._db = self._indexer = self.db_class(kwargs['host'],port=kwargs['port'])
 
 

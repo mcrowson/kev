@@ -37,16 +37,16 @@ class DocDB(object):
         doc_obj.set_pk('{0}:id:{1}:{2}'.format(hash_pk, self.backend_id, doc_obj.get_class_name()))
         return doc_obj
 
-    def check_unique(self,doc_obj,key,value):
-        obj = doc_obj.objects().filter({key:value})
+    @staticmethod
+    def check_unique(doc_obj, key, value):
+        obj = doc_obj.objects().filter({key: value})
         if len(obj) == 0:
             return True
         if hasattr(doc_obj,'_id') and len(obj) == 1:
             if doc_obj._id == obj[0]._id:
                 return True
         raise ValidationException(
-                'There is already a {key} with the value of {value}'\
-                    .format(key=key,value=value))
+                'There is already a {key} with the value of {value}'.format(key=key, value=value))
 
     def _save(self,doc_obj):
         doc = doc_obj._doc.copy()
@@ -54,14 +54,13 @@ class DocDB(object):
             prop.validate(doc.get(key), key)
             raw_value = prop.get_python_value(doc.get(key))
             if prop.unique:
-                self.check_unique(doc_obj,key,raw_value)
+                self.check_unique(doc_obj, key, raw_value)
             value = prop.get_db_value(raw_value)
             doc[key] = value
-
 
         doc['_doc_type'] = get_doc_type(doc_obj.__class__)
 
         if '_id' not in doc:
-            self.create_pk(doc_obj,doc)
+            self.create_pk(doc_obj, doc)
             doc['_id'] = doc_obj._id
-        return (doc_obj,doc)
+        return (doc_obj, doc)

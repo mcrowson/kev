@@ -122,7 +122,7 @@ class BaseDocument(object):
 
     @classmethod
     def get_doc_id(cls,id):
-        return '{0}:id:{1}:{2}'.format(id,cls.get_db().backend_id,cls.get_class_name())
+        return '{0}:id:{1}:{2}'.format(id, cls.get_db().backend_id, cls.get_class_name())
 
     @classmethod
     def get_class_name(cls):
@@ -131,13 +131,13 @@ class BaseDocument(object):
     @classmethod
     def get_index_name(cls, prop, index_value):
         return '{0}:{1}:indexes:{2}:{3}'.format(
-            cls.get_db().backend_id,cls.get_class_name(), prop, index_value).lower()
+            cls.get_db().backend_id, cls.get_class_name(), prop, index_value).lower()
 
-    #Basic Operations
+    # Basic Operations
 
     @classmethod
-    def get(cls,doc_id):
-        return cls.get_db().get(cls,doc_id)
+    def get(cls, doc_id):
+        return cls.get_db().get(cls, doc_id)
 
     @classmethod
     def all(cls):
@@ -151,7 +151,6 @@ class BaseDocument(object):
 
     def save(self):
         self._db.save(self)
-
 
     class Meta:
         use_db = 'default'

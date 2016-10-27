@@ -5,13 +5,14 @@ import six
 
 from kev.backends.redis.db import RedisDB
 
+
 class S3RedisDB(RedisDB):
 
     db_class = boto3.resource
     indexer_class = redis.StrictRedis
     backend_id = 's3redis'
 
-    def __init__(self,**kwargs):
+    def __init__(self, **kwargs):
 
         if 'aws_secret_access_key' in kwargs and 'aws_access_key_id' in kwargs:
             boto3.Session(aws_secret_access_key=kwargs['aws_secret_access_key'],
@@ -21,9 +22,9 @@ class S3RedisDB(RedisDB):
 
         self._indexer = self.indexer_class(**kwargs['indexer'])
 
-    #CRUD Operation Methods
+    # CRUD Operation Methods
 
-    def save(self,doc_obj):
+    def save(self, doc_obj):
         doc_obj, doc = self._save(doc_obj)
 
         self._db.Object(self.bucket, doc_obj._id).put(

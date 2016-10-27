@@ -1,8 +1,8 @@
 import boto3
 import json
-import redis
 
 from kev.backends import DocDB
+
 
 class S3DB(DocDB):
 
@@ -20,16 +20,17 @@ class S3DB(DocDB):
 
     #CRUD Operation Methods
 
-    def all_prefix(self,doc_class):
+    @staticmethod
+    def all_prefix(doc_class):
         return '{0}:all/'.format(
             doc_class.get_class_name())
 
     def doc_all_id(self,doc_class,doc_id):
         return '{0}{1}'.format(self.all_prefix(doc_class),doc_id)
 
-    def save(self,doc_obj):
+    def save(self, doc_obj):
         doc_obj, doc = self._save(doc_obj)
-        self._db.Object(self.bucket, self.doc_all_id(doc_obj.__class__,doc_obj._id)).put(
+        self._db.Object(self.bucket, self.doc_all_id(doc_obj.__class__, doc_obj._id)).put(
                 Body=json.dumps(doc))
         self.add_indexes(doc_obj, doc)
         self.remove_indexes(doc_obj)
@@ -37,7 +38,7 @@ class S3DB(DocDB):
         # doc_obj._doc = doc_obj.process_doc_kwargs(doc)
         return doc_obj
 
-    def get(self,doc_class,doc_id):
+    def get(self, doc_class, doc_id):
 
         doc = json.loads(self._db.Object(
                 self.bucket, doc_class.get_doc_id(
@@ -50,18 +51,17 @@ class S3DB(DocDB):
             i.delete()
 
     def delete(self, doc_obj):
-        self._db.Object(self.bucket,doc_obj._id).delete()
+        self._db.Object(self.bucket, doc_obj._id).delete()
         self.remove_from_model_set(doc_obj)
         doc_obj._index_change_list = doc_obj.get_indexes()
         self.remove_indexes(doc_obj)
 
-
-    def all(self,doc_class):
+    def all(self, doc_class):
         all_prefix = self.all_prefix(doc_class)
-        id_tail = ':id:{0}:{1}'.format(self.backend_id,doc_class.get_class_name())
-        id_list = [id.key.replace(id_tail,'') for id in self._indexer.objects.filter(Prefix=all_prefix)]
-        for id in id_list:
-            yield self.get(doc_class,id)
+        id_tail = ':id:{0}:{1}'.format(self.backend_id, doc_class.get_class_name())
+        id_list = [idx.key.replace(id_tail, '') for idx in self._indexer.objects.filter(Prefix=all_prefix)]
+        for idx in id_list:
+            yield self.get(doc_class, idx)
 
     #Indexing Methods
 

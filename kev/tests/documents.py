@@ -6,7 +6,7 @@ from kev import (Document,CharProperty,DateTimeProperty,
                  FloatProperty)
 from kev.exceptions import ValidationException, QueryError
 from kev.query import combine_list, combine_dicts
-from kev.testcase import kev_handler,KevTestCase
+from kev.testcase import kev_handler, KevTestCase
 
 
 class TestDocument(Document):

@@ -1,4 +1,3 @@
-import os
 import sys
 import importlib
 
@@ -10,7 +9,8 @@ def import_mod(imp):
     '''
     __import__(imp,globals(),locals())
     return sys.modules[imp]
-    
+
+
 def import_util(imp):
     '''
     Lazily imports a utils (class,
@@ -22,6 +22,7 @@ def import_util(imp):
     mod_name,obj_name = imp.rsplit('.',1)
     mod = importlib.import_module(mod_name)
     return getattr(mod,obj_name)
+
 
 def get_doc_type(klass):
     if hasattr(klass.Meta,'doc_type'):
